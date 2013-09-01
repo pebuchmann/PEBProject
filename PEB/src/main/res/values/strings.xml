@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PEB</string>
+    <string name="dummy_button">Current Song</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="startService_button" >Start Service</string>
+    <string name="startService_name">Start Service</string>
+
+</resources>
