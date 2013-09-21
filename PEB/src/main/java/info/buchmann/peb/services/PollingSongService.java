@@ -24,7 +24,8 @@ import info.buchmann.peb.helper.Accessor;
 /**
  * Created by peter on 8/31/13.
  */
-public class QuerySongService extends Service {
+public class PollingSongService extends Service {
+    private static String TAG = "PollingSongService";
     private boolean IS_RUNNING = false;
     private Context context;
     private int counter = 0;
@@ -43,7 +44,7 @@ public class QuerySongService extends Service {
     }
 
     private void startService() {
-        timer.scheduleAtFixedRate(new MainTask(), 0, 15000);
+        timer.scheduleAtFixedRate(new MainTask(), 0, 35000);
     }
 
     private class MainTask extends TimerTask {
@@ -52,11 +53,14 @@ public class QuerySongService extends Service {
             try {
                 json = Accessor.querySRF3();
             } catch (Exception e) {
-                Log.e("error",e.getMessage().toString());
+                Log.e(TAG, "inside Timer", e);
                 return;
             }
             Song currentSong = Accessor.parseSRF3Json(json);
-            if(!lastSong.equals(currentSong)){
+            if(lastSong!= null && !lastSong.equals(currentSong)){
+                lastSong = currentSong;
+                broadcastUpdate(currentSong);
+            }else if(lastSong == null){
                 lastSong = currentSong;
                 broadcastUpdate(currentSong);
             }
@@ -66,7 +70,7 @@ public class QuerySongService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d("debug", "QuerySongService:onStartCommand Service started.");
+        Log.d(TAG, "PollingSongService:onStartCommand Service started.");
 
         return Service.START_NOT_STICKY;
     }

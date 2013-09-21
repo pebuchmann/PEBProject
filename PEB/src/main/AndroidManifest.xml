@@ -27,7 +27,12 @@
         </activity>
 
         <service
-                android:name=".services.QuerySongService"
+                android:name=".services.PollingSongService"
+                android:label="@string/startService_name"
+                >
+        </service>
+        <service
+                android:name=".services.QueryCurrentSongService"
                 android:label="@string/startService_name"
                 >
         </service>

@@ -34,6 +34,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class layout {
         public static final int activity_fullscreen=0x7f030000;
+        public static final int query_fullscreen=0x7f030001;
     }
     public static final class string {
         /**  From: file:/Users/peter/AndroidStudioProjects/PEBProject/PEB/src/main/res/values/strings.xml 

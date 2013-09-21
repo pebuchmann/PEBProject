@@ -1,7 +1,8 @@
 package info.buchmann.peb;
 
 import info.buchmann.peb.domain.Song;
-import info.buchmann.peb.services.QuerySongService;
+import info.buchmann.peb.services.PollingSongService;
+import info.buchmann.peb.services.QueryCurrentSongService;
 import info.buchmann.peb.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -130,23 +131,18 @@ public class MusicUpdateActivity extends Activity {
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
 
-        final Button dummyButton = (Button) findViewById(R.id.dummy_button);
-        dummyButton.setOnClickListener(new View.OnClickListener() {
+        final Button queryCurrentSongButton = (Button) findViewById(R.id.dummy_button);
+        queryCurrentSongButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-               /*Log.d("Info","Dummy Button clicked" );
-               QuerySongTask qst = new QuerySongTask();
-               qst.execute("bla");*/
-                Toast toast = Toast.makeText(getApplicationContext(), "Starting Download", Toast.LENGTH_SHORT);
-                toast.show();
-                //sendToPebble();
+                startQuerySongService();
 
             }
 
         });
 
-        final Button serviceButton = (Button) findViewById(R.id.startService_button);
-        serviceButton.setOnClickListener(new View.OnClickListener() {
+        final Button servicePollingServiceButton = (Button) findViewById(R.id.startService_button);
+        servicePollingServiceButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                /*Log.d("Info","Dummy Button clicked" );
@@ -155,7 +151,7 @@ public class MusicUpdateActivity extends Activity {
                 Log.d("Info", "startService Button clicked");
                 Toast toast = Toast.makeText(getApplicationContext(), "Starting Service", Toast.LENGTH_SHORT);
                 toast.show();
-                startQuerySongService();
+                startPollingSongService();
             }
 
         });
@@ -213,9 +209,14 @@ public class MusicUpdateActivity extends Activity {
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
-    private void startQuerySongService() {
-        Intent i = new Intent(this, QuerySongService.class);
+    private void startPollingSongService() {
+        Intent i = new Intent(this, PollingSongService.class);
 
+        this.startService(i);
+    }
+
+    private void startQuerySongService() {
+        Intent i = new Intent(this, QueryCurrentSongService.class);
 
         this.startService(i);
     }
