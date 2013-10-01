@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Srf3Helper">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Srf3Helper/build/libs/Srf3Helper.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

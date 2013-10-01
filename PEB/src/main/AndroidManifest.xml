@@ -36,6 +36,11 @@
                 android:label="@string/startService_name"
                 >
         </service>
+        <receiver android:name="info.buchmann.peb.receiver.MediaEventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
 
 
     </application>

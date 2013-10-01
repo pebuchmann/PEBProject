@@ -8,12 +8,26 @@ import java.io.Serializable;
 public class Song implements Serializable{
     private String title = "?";
     private String artist = "?";
+    private String album = "?";
+    private String playedDate = "?";
+    private boolean isPlaying = false;
 
 
 
-    public Song(String pTitle,String pArtist){
+
+    public Song(String pTitle,String pArtist, String pPlayedDate,boolean pIsPlaying){
         this.title=pTitle;
         this.artist = pArtist;
+        this.playedDate = pPlayedDate;
+        this.isPlaying = pIsPlaying;
+
+    }
+
+    public String formatPlayStatus(){
+        if(isPlaying){
+            return "Now on SRF 3";
+        }
+        return playedDate;
     }
 
     public String getTitle() {
@@ -31,6 +45,32 @@ public class Song implements Serializable{
     public void setArtist(String artist) {
         this.artist = artist;
     }
+
+    public String getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
+    }
+
+    public String getPlayedDate() {
+        return playedDate;
+    }
+
+    public void setPlayedDate(String playedDate) {
+        this.playedDate = playedDate;
+    }
+
+
+    public boolean isPlaying() {
+        return isPlaying;
+    }
+
+    public void setPlaying(boolean playing) {
+        isPlaying = playing;
+    }
+
 
     @Override
     public boolean equals(Object pOther){

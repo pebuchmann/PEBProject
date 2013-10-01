@@ -30,7 +30,7 @@ public class PollingSongService extends Service {
     private Context context;
     private int counter = 0;
     private Timer timer = new Timer();
-    private Song lastSong = new Song("","");
+    private Song lastSong = new Song("","","",false);
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -56,7 +56,7 @@ public class PollingSongService extends Service {
                 Log.e(TAG, "inside Timer", e);
                 return;
             }
-            Song currentSong = Accessor.parseSRF3Json(json);
+            Song currentSong = Accessor.parseSRF3Json(json,0);
             if(lastSong!= null && !lastSong.equals(currentSong)){
                 lastSong = currentSong;
                 broadcastUpdate(currentSong);

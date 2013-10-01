@@ -34,7 +34,7 @@ public class QueryCurrentSongService extends Service {
         new Thread() {
             public void run() {
                 String rawJson = Accessor.querySRF3();
-                Song song = Accessor.parseSRF3Json(rawJson);
+                Song song = Accessor.parseSRF3Json(rawJson,0);
                 broadcastUpdate(song);
             }
         }.start();

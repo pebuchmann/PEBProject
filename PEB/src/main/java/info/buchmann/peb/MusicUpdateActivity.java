@@ -62,6 +62,7 @@ public class MusicUpdateActivity extends Activity {
      */
     private SystemUiHider mSystemUiHider;
     private SongUpdateBroadcastReceiver songUpdateBroadcastReceiver;
+    private MusicUpdateBroadcastReceiver musicUpdateBroadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,6 +159,9 @@ public class MusicUpdateActivity extends Activity {
 
         this.songUpdateBroadcastReceiver = new SongUpdateBroadcastReceiver(this);
         LocalBroadcastManager.getInstance(this).registerReceiver(this.songUpdateBroadcastReceiver, new IntentFilter("songUpdateBroadcast"));
+        this.musicUpdateBroadcastReceiver = new MusicUpdateBroadcastReceiver(this);
+        LocalBroadcastManager.getInstance(this).registerReceiver(this.musicUpdateBroadcastReceiver,new IntentFilter("musicUpdateBroadcast"));
+
     }
 
 
@@ -225,12 +229,12 @@ public class MusicUpdateActivity extends Activity {
 
         final Intent i = new Intent("com.getpebble.action.SEND_NOTIFICATION");
         String bodyText = "Some Error occurrred";
-        if(song != null){
+        if (song != null) {
             bodyText = song.getArtist() + ": " + song.getTitle();
         }
         final Map data = new HashMap();
         data.put("title", "On SRF3");
-        data.put("body",bodyText );
+        data.put("body", bodyText);
         final JSONObject jsonData = new JSONObject(data);
         final String notificationData = new JSONArray().put(jsonData).toString();
 
@@ -261,4 +265,23 @@ public class MusicUpdateActivity extends Activity {
             sendToPebble(song);
         }
     }
+
+    private class MusicUpdateBroadcastReceiver extends BroadcastReceiver {
+        Activity activity;
+
+        public MusicUpdateBroadcastReceiver(Activity pActivity) {
+            activity = pActivity;
+        }
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Intent i = new Intent("com.getpebble.action.NOW_PLAYING");
+            i.putExtra("artist", "Carly Rae Jepsen");
+            i.putExtra("album", "Kiss");
+            i.putExtra("track", "Call Me Maybe");
+
+            sendBroadcast(i);
+        }
+    }
+
 }
