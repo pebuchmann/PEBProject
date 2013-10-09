@@ -5,7 +5,7 @@ PEBProject
 ### Achtung: Dies ist ein Proof-of-concept, kein fertiges Produkt!
 
 
-Die PEB-App kann für Android Geräte zusammen mit der Pebble-Uhr dazu verwendet werden, 
+Die PEB-App kann auf Android Geräten zusammen mit der Pebble-Uhr dazu verwendet werden,
 die letzten drei Songs, die auf SRF 3 gespielt wurden, abzufragen.
 
 Die PEB-App arbeitet in zwei verschiedenen Modi:
