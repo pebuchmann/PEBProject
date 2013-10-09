@@ -1,23 +1,7 @@
 package info.buchmann.peb.tasks;
 
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
-
-import java.io.BufferedInputStream;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
-
-import static com.getpebble.android.kit.PebbleKit.*;
-import com.getpebble.android.kit.util.PebbleDictionary;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import info.buchmann.peb.helper.Accessor;
 
 
 /**

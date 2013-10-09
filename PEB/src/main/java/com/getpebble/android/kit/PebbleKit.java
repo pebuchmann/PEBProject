@@ -15,7 +15,7 @@ import java.util.UUID;
 import static com.getpebble.android.kit.Constants.*;
 
 /**
- * A helper class providing methods for interacting with third-party Pebble Smartwatch applications. Pebble-enabled
+ * A network class providing methods for interacting with third-party Pebble Smartwatch applications. Pebble-enabled
  * Android applications may use this class to assist in sending/receiving data between the watch and the phone.
  *
  * @author zulak@getpebble.com

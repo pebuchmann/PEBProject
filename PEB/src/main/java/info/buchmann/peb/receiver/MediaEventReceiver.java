@@ -4,12 +4,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Message;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.view.KeyEvent;
 
 import info.buchmann.peb.domain.Song;
-import info.buchmann.peb.helper.Accessor;
+import info.buchmann.peb.network.Accessor;
 
 /**
  * Created by peter on 9/21/13.

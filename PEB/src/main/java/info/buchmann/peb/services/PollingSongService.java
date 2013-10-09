@@ -1,25 +1,22 @@
 package info.buchmann.peb.services;
 
 import android.app.Service;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import info.buchmann.peb.domain.Song;
-import info.buchmann.peb.helper.Accessor;
+import info.buchmann.peb.network.Accessor;
 
 /**
  * Created by peter on 8/31/13.

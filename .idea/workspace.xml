@@ -28,13 +28,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adee6cb4-c2b7-4056-bade-c8b7f399560f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java" afterPath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PEB/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/PEB/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/MusicUpdateActivity.java" afterPath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/MusicUpdateActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java" afterPath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java" afterPath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PEB/src/main/java/com/getpebble/android/kit/PebbleKit.java" afterPath="$PROJECT_DIR$/PEB/src/main/java/com/getpebble/android/kit/PebbleKit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/services/PollingSongService.java" afterPath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/services/PollingSongService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/services/QueryCurrentSongService.java" afterPath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/services/QueryCurrentSongService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/domain/Song.java" afterPath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/domain/Song.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/tasks/QuerySongTask.java" afterPath="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/tasks/QuerySongTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PEBProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,7 +93,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java" line="37" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
+      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java" line="31" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -108,7 +108,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java" line="44" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
+      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java" line="38" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -123,7 +123,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java" line="49" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
+      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java" line="43" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -138,7 +138,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java" line="79" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
+      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java" line="73" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -153,7 +153,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java" line="81" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
+      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java" line="75" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -168,7 +168,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java" line="89" class="info.buchmann.peb.receiver.MediaEventReceiver.SongQueryThread" package="info.buchmann.peb.receiver">
+      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java" line="88" class="info.buchmann.peb.receiver.MediaEventReceiver.SongQueryThread" package="info.buchmann.peb.receiver">
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -183,7 +183,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java" line="123" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
+      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java" line="117" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -198,7 +198,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java" line="95" class="info.buchmann.peb.receiver.MediaEventReceiver.SongQueryThread" package="info.buchmann.peb.receiver">
+      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java" line="94" class="info.buchmann.peb.receiver.MediaEventReceiver.SongQueryThread" package="info.buchmann.peb.receiver">
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -213,7 +213,7 @@
         <option name="CONDITION" value="&#13;&#13;JAVA" />
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java" line="107" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
+      <breakpoint url="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java" line="101" class="info.buchmann.peb.helper.Accessor" package="info.buchmann.peb.helper">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -241,25 +241,25 @@
       <file leaf-file-name="QueryCurrentSongService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/services/QueryCurrentSongService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="16" selection-start="809" selection-end="1045" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="840">
+            <state line="33" column="16" selection-start="781" selection-end="1017" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PollingSongService.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PollingSongService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/services/PollingSongService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="33" selection-start="958" selection-end="958" vertical-scroll-proportion="0.023809524" vertical-offset="225" max-vertical-offset="1455">
+            <state line="32" column="33" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1455">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Accessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java">
+      <file leaf-file-name="Accessor.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="0" selection-start="3943" selection-end="3943" vertical-scroll-proportion="0.0" vertical-offset="1471" max-vertical-offset="2670">
+            <state line="27" column="13" selection-start="719" selection-end="719" vertical-scroll-proportion="0.16962843" vertical-offset="0" max-vertical-offset="2280">
               <folding />
             </state>
           </provider>
@@ -268,7 +268,7 @@
       <file leaf-file-name="Song.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/domain/Song.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="34" selection-start="570" selection-end="586" vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="1350">
+            <state line="25" column="34" selection-start="570" selection-end="586" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
@@ -276,20 +276,20 @@
       </file>
       <file leaf-file-name="activity_fullscreen.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PEB/src/main/res/layout/activity_fullscreen.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MediaEventReceiver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1950">
+            <state line="43" column="0" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0" vertical-offset="335" max-vertical-offset="1935">
               <folding />
             </state>
           </provider>
@@ -338,6 +338,7 @@
         <option value="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/services/PollingSongService.java" />
         <option value="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/domain/Song.java" />
         <option value="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java" />
+        <option value="$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java" />
       </list>
     </option>
   </component>
@@ -578,7 +579,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="helper">
+            <PATH_ELEMENT USER_OBJECT="network">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -622,11 +623,11 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="MyAvd1" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Android Application.main">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -785,13 +786,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="42" y="22" width="1238" height="778" extended-state="0" />
+    <frame x="42" y="22" width="1238" height="778" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -803,14 +805,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973032" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1568792" sideWeight="0.6701923" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26174498" sideWeight="0.67121214" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32955772" sideWeight="0.6701923" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298077" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -820,13 +821,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298077" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15695792" sideWeight="0.6701923" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298077" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298077" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -917,13 +918,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PEB/src/main/res/layout/activity_fullscreen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java">
@@ -968,14 +969,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/services/QueryCurrentSongService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="16" selection-start="809" selection-end="1045" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/helper/Accessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="0" selection-start="3943" selection-end="3943" vertical-scroll-proportion="0.0" vertical-offset="1471" max-vertical-offset="2670">
+        <state line="33" column="16" selection-start="781" selection-end="1017" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="810">
           <folding />
         </state>
       </provider>
@@ -988,18 +982,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PEB/src/main/res/layout/activity_fullscreen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="885">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/receiver/MediaEventReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1950">
+        <state line="43" column="0" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0" vertical-offset="335" max-vertical-offset="1935">
           <folding />
         </state>
       </provider>
@@ -1011,16 +1005,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/services/PollingSongService.java">
+    <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/MusicUpdateActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="33" selection-start="958" selection-end="958" vertical-scroll-proportion="0.023809524" vertical-offset="225" max-vertical-offset="1455">
+        <state line="244" column="0" selection-start="9063" selection-end="9063" vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="3735">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/MusicUpdateActivity.java">
+    <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/services/PollingSongService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="244" column="0" selection-start="9063" selection-end="9063" vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="3735">
+        <state line="32" column="33" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PEB/src/main/java/info/buchmann/peb/network/Accessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="719" selection-end="719" vertical-scroll-proportion="0.16962843" vertical-offset="0" max-vertical-offset="2280">
           <folding />
         </state>
       </provider>

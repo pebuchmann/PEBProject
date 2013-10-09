@@ -6,10 +6,8 @@ import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import java.util.TimerTask;
-
 import info.buchmann.peb.domain.Song;
-import info.buchmann.peb.helper.Accessor;
+import info.buchmann.peb.network.Accessor;
 
 /**
  * Created by peter on 9/3/13.
